@@ -9,8 +9,9 @@ import re
 
 with open('test.txt', 'r') as f:
     content = f.read()
-    pattern = r'\b[0-1]{2}[0-1]*[02468]\b'
+    pattern = r'\b[0-1][1]*[1][0-1]*[02468]\b'
     numbers = re.findall(pattern, content)
+    print(numbers)
     if numbers:
         min_number = min(numbers)
         count = len(numbers)
